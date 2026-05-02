@@ -17,4 +17,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Empleados\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GestionE.BL\GestionE.BL.csproj" />
+    <ProjectReference Include="..\GestionE.Data\GestionE.Data.csproj" />
+    <ProjectReference Include="..\GestionE.Models\GestionE.Models.csproj" />
+  </ItemGroup>
+
 </Project>
