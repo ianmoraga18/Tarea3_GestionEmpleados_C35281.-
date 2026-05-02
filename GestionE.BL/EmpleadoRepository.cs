@@ -28,9 +28,6 @@ namespace GestionE.BL
         }
 
 
-
-
-
         public void Eliminar(int id)
         {
             var empleado = _context.Empleados.Find(id);

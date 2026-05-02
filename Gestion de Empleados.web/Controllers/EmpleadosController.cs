@@ -41,9 +41,27 @@ namespace Gestion_de_Empleados.web.Controllers
             return View(empleado);
         }
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+
+        public IActionResult Edit(int id) //Empleado empleado
+        {
+            //if (ModelState.IsValid)
+            //{
+            //    _repo.Actualizar(empleado);
+            //    return RedirectToAction(nameof(Index));
+            //}
+
+           var empleado = _repo.ObtenerPorId(id);
+            if (empleado == null) return NotFound();
+            return View(empleado);
+
+            return View(empleado);
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Edit(Empleado empleado)
         {
             if (ModelState.IsValid)
@@ -53,7 +71,6 @@ namespace Gestion_de_Empleados.web.Controllers
             }
             return View(empleado);
         }
-
 
         [HttpPost]
         public IActionResult ToggleActivo(int id)

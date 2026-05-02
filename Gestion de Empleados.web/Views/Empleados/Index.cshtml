@@ -9,6 +9,7 @@
 
 <p>Total registros: @ViewBag.TotalRegistros</p>
 
+<a asp-action="Create" class="btn btn-success">Registrar nuevo empleado</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -41,6 +42,7 @@
                     }
                 </td>
                 <td>
+                  
                     <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-sm btn-warning">Editar</a>
                     <form asp-action="ToggleActivo" asp-route-id="@e.Id" method="post" style="display:inline">
                         <button type="submit" class="btn btn-sm @(e.Activo ? "btn-danger" : "btn-success")">
